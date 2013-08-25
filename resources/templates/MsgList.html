@@ -1,0 +1,15 @@
+<div data-role="header" data-position="fixed">
+	<h1>Queue Messages</h1>
+</div>
+<div data-role="content">
+	<form>
+	    <label for="msgtextarea">Enter a Message:</label>
+	    <textarea cols="40" rows="4" name="msgtextarea" id="msgtextarea"></textarea>
+	    <input id="send" value="Send" data-icon="plus" data-inline="true" type="button"/>
+	</form>
+	<ul id="msgList" data-role="listview" data-inset="true">
+	<% _.each(msgs, function(msg) { %>
+		<li><%= msg.content %></li> 
+	<% }); %>
+	</ul>
+</div>
