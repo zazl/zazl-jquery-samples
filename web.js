@@ -37,9 +37,13 @@ var app = connect()
 			var postdata = '';
 			request.on('data', function(data) { postdata += data; });
 			request.on('end', function() {
-				var msg = postdata.split('=')[1];
+				var msg = JSON.parse(postdata);
+				messages.push(msg);
+				if (messages.length > 10) {
+					messages.shift();
+				}			
 				wslist.forEach(function(ws) {
-					ws.emit('msg', {content: msg});
+					ws.emit('msg', msg);
 				});
 			});
 		}

@@ -25,8 +25,9 @@ function($, Backbone, _, io, template){
 					url: "./msg",
 					type: "POST",
 					headers: { "cache-control": "no-cache" },
-					contentTypeString: "application/x-www-form-urlencoded; charset=utf-8",
-					data: {msg: msg},
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					data: JSON.stringify({msg: msg}),
 					success: function(data, textStatus, jqXHR) {
 						console.log("msg sent");
 					}.bind(this),
@@ -40,7 +41,7 @@ function($, Backbone, _, io, template){
 			io.transports = ['xhr-polling'];
 			var socket = io.connect('http://'+window.location.host);
 			socket.on('msg', function (msg) {
-		    	$("#msgList").append('<li>'+msg.content+'</li>');	
+		    	$("#msgList").append('<li>'+msg.msg+'</li>');	
 		    	$("#msgList").listview('refresh');
 		  	});			
 		},
