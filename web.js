@@ -63,4 +63,4 @@ iosvr.sockets.on('connection', function (ws) {
 	wslist.push(ws);
 });
 
-console.log("Zazl Demonstration Samples for Dojo running on port ["+port+"] examples ["+resourcecdir+"]");
+console.log("Zazl Demonstration Samples for JQuery running on port ["+port+"] resources ["+resourcecdir+"]");
