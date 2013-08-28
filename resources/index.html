@@ -6,12 +6,27 @@
 	<link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<div style="background-color: #B9F2FE"><a href="http://zazl.org"> <image src="zazl.png" width="70" height="70"><image></a></div>
-	<div style="font-family: Helvetica, sans-serif; font-size: 24px; font-weight: bold; margin-top: 5px; margin-bottom: 10px;">Zazl Optimizer JQuery Samples</div>
-	<div>The Text Messenger sample demonstrates the Zazl Optimizer loading a JQuery/JQuery mobile/Backbone/Underscore application. Take a look at the javascript network traffic in a browsers developers tools to see the optimizaton in action.</div>
-	<p>The source code can be found <a href="https://github.com/zazl/zazl-jquery-samples">here</a></p>
+	<table style="width: 100%; border-spacing: 0px;">
+		<colgroup>
+			<col style="width: 80px" />
+		</colgroup>
+		<tbody style="background-color: #B9F2FE">
+		<tr>
+			<td>
+				<a style="float: left;" href="http://zazl.org"> <image src="zazl.png" width="70" height="70"><image></a>
+			</td>
+			<td>
+				<h1 style="font-family: Helvetica, sans-serif; font-size: 24px; font-weight: bold;">JQuery Samples</h1>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<p><a href="https://github.com/zazl/zazloptimizer">Zazl</a> is a Dynamic Javascript Optimizer that enables the loading of AMD modules and all their dependencies in a single response stream without depending on static build tools. It also leverages JavaScript compression tools such as Google Clousure, Uglify-js and Dojo Shrinksafe.</p>
+	<p>The samples use the Zazl AMD loader to load their modules.The Zazl backend component that performs all the dependency analysis and optimization is running on a Node.js based server.</p>
+	<p>The Text Messenger sample demonstrates the Zazl Optimizer loading a JQuery/JQuery mobile/Backbone/Underscore application. Take a look at the javascript network traffic in a browsers developers tools to see the optimization in action.</p>
+	<p>The samples source code can be found <a href="https://github.com/zazl/zazl-jquery-samples">here</a></p>
 	<ul>
-		<li><a href="textmsg.html">Text Messenger</a> - Simple messenger that broadcasts text messages to all connected clients</li>
+		<li><a href="textmsg.html">Text Messenger</a> - Simple messenger that broadcasts text messages to all connected clients via socket-io</li>
 	</ul>
 </body>
 </html>
