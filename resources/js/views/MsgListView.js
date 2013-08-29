@@ -37,7 +37,7 @@ function($, Backbone, _, io, template){
 						console.log("msg sent");
 					}.bind(this),
 					error: function(jqXHR, textStatus, errorThrown) {
-						console.log("send MSG error: "+textStatus);
+						console.log("send MSG error: "+textStatus+" : "+errorThrown);
 					}
 				});
 			}

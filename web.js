@@ -35,6 +35,9 @@ var app = connect()
 					ws.emit('msg', msg);
 				});
 			});
+			response.setHeader('Content-Type', 'text/json; charset=UTF-8');
+			response.write("{}");
+			response.end();
 		}
 		response.end();
 	})
